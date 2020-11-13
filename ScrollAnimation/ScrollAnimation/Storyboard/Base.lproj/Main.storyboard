@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AnimationController" customModule="ScrollAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPq-w8-KAm" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anL-V9-KAX" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="612" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="s0R-RB-oLf"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cs2-gv-YIq">
+                                <rect key="frame" x="187.5" y="822" width="39" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="thP-x8-g2f"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fPq-w8-KAm" secondAttribute="bottom" id="7kX-hb-SkH"/>
+                            <constraint firstItem="anL-V9-KAX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8c7-7S-9hA"/>
+                            <constraint firstItem="fPq-w8-KAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N4J-ae-9qx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPq-w8-KAm" secondAttribute="trailing" id="Pmf-K0-2dY"/>
+                            <constraint firstItem="cs2-gv-YIq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tm0-20-rHB"/>
+                            <constraint firstItem="cs2-gv-YIq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YfH-Uh-GwM"/>
+                            <constraint firstItem="anL-V9-KAX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZXA-Nr-JFK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="anL-V9-KAX" secondAttribute="bottom" constant="50" id="e1e-jr-tLa"/>
+                            <constraint firstItem="fPq-w8-KAm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kE4-yc-uxT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageSlider" destination="fPq-w8-KAm" id="nfl-iP-MyM"/>
+                        <outlet property="pageController" destination="cs2-gv-YIq" id="oBn-7I-AhG"/>
+                        <outlet property="smallImageSlider" destination="anL-V9-KAX" id="wYN-Tf-3BS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
